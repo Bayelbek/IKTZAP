@@ -36,7 +36,7 @@
             margin: 0 15px 0 0 ;
         }
         .signIN:hover{
-            color: #019064;
+            color: black;
             background-color: white;
             box-shadow: 0 0 5px 1px rgba(66, 194, 66, 0.541);
         }
@@ -49,7 +49,7 @@
             
         }
         .signUP:hover{
-            color:#019064;
+            color:black;
             box-shadow: 0 0 8px 1px rgba(66, 194, 66, 0.521);
 
         }
@@ -146,6 +146,10 @@
                 a{
                     font-size: 20px;
                     font-weight: 600;
+                    transition: all .2s ease-in-out;
+                    &:hover{
+                        text-shadow: 0 0 20px white;
+                    }
                 }
             }
         }

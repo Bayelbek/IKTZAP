@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 import '../../css/style.scss';
-import '../../css/homeHeader/homeHeader.scss';
+import '../../css/pages/header/homeHeader.scss';
 
 function header() {
   return (
@@ -9,7 +11,7 @@ function header() {
       <div className="container">
         <div className="header_one">
             <div className="contact">
-                <p><img src="img/local.png" alt="" /><a href="https://maps.app.goo.gl/yZtsMqB1mRewJQFr5">Чита ул. Дивизионная 3</a></p>
+                <p><img src="img/local5.png" alt="" /><a href="https://maps.app.goo.gl/yZtsMqB1mRewJQFr5">Чита ул. Дивизионная 3</a></p>
                 <p><img src="img/phone.svg" alt="" /><a href="tel:+79998889999">+7 999 888 99-99</a></p>
             </div>
             <div className="register">
@@ -36,10 +38,10 @@ function header() {
             <div className="header_three_item">
             <div></div>
             <ul>
-              <li><a href="">Главная</a></li>
-              <li><a href="">Категории</a></li>
-              <li><a href="">Магазин</a></li>
-              <li><a href="">Контакты</a></li>
+              <li><Link to="/">Главная</Link></li>
+              <li><Link to="/categories">Категории</Link></li>
+              <li><Link to="">Магазин</Link></li>
+              <li><Link to="">Контакты</Link></li>
             </ul>
             <a href="" className='button'>
                 гараж
