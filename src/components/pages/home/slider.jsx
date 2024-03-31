@@ -5,7 +5,7 @@ export default function Slider({name, img, link, spisok}) {
     <>
         <div className="text">
                         <h1 className="title">
-                            {name}<b>или аналог</b>
+                            SANY SY500H <b>или аналог</b>
                         </h1>
                         <ul>
                             <li><img src="img/done.png" alt="" />Эксплуатационная масса: 50т</li>
@@ -14,9 +14,9 @@ export default function Slider({name, img, link, spisok}) {
                             <li><img src="img/done.png" alt="" />Длинна стрелы : 7м</li>
                             <li><img src="img/done.png" alt="" />Объем ковша : 2,5 м3</li>
                         </ul>
-                        <a href={link}>Подробнее...</a>
+                        <button>Подробнее...</button>
                     </div>
-                    <img className='ekskovator' src={img} alt="" />
+                    <img className='ekskovator' src="img/Cars/Эксковатор.jpg" alt="" />
       
     </>
   )
