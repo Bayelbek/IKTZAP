@@ -30,11 +30,11 @@ function Electric() {
                     <p className='number'>1</p> 
                     <p>|</p>
                     <p className='shtuk'>шт</p>
-                    <a href="">Подробнее...</a>
+                    <a  href="">Подробнее...</a>
                 </li>
             </ul>
         </div>
-        <div className="info">
+        <div style={{display:'none'}} className="info">
             <div className="container">
                 <div className="item">
                     <div className="header">
