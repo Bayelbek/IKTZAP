@@ -12,7 +12,7 @@ function ToyotaLc200() {
         <div className="toyotaLc200">
             <div className="container">
                 <div className="title">
-                    <div className='text'><Link to='/categories'>Категории </Link>/ <Link to='/vnedorojnik'>Внедорожник</Link> / Toyota LC 200 </div>
+                    <div className='text'><Link to='/categories'>Категории </Link>/ <Link to='/category/1'>Внедорожник</Link> / Toyota LC 200 </div>
                 </div>
                 <ul>
                 <li>

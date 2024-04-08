@@ -6,13 +6,18 @@ import Header from '../../../../../header'
 import '../../../../../../css/pages/categories/vnedorojnik/toyota_lc_200/Электричество/electric.scss'
 
 function Electric() {
+    const [openInfo, setOpenInfo] = React.useState(false);
+
+    const openInfoClick = () => setOpenInfo(true);
+    const closeInfoClick = () => setOpenInfo(false);
+
   return (
     <>
     <Header/>
     <div className="toyota_Lc200_Electric">
         <div className="container">
             <div className="title">
-                <div className='text'><Link to='/categories'>Категории </Link>/ <Link to='/vnedorojnik'>Внедорожник</Link> / Toyota LC 200 </div>
+                <div className='text'><Link to='/categories'>Категории </Link>/ <Link to='/category/1'>Внедорожник</Link> / Toyota LC 200 </div>
             </div>
             <div className="text">Электричество</div>
             <ul>
@@ -22,7 +27,7 @@ function Electric() {
                     <p className='number'>27</p>
                     <p>|</p>
                     <p className='shtuk'>шт</p>
-                    <a href="">Подробнее...</a>
+                    <button onClick={openInfoClick}>Подробнее...</button>
                 </li>
                 <li>
                     <p className='name'>Name</p>
@@ -30,11 +35,12 @@ function Electric() {
                     <p className='number'>1</p> 
                     <p>|</p>
                     <p className='shtuk'>шт</p>
-                    <a  href="">Подробнее...</a>
+                    <button onClick={openInfoClick}>Подробнее...</button>
                 </li>
             </ul>
         </div>
-        <div style={{display:'none'}} className="info">
+        {openInfo && (
+            <div className="info">
             <div className="container">
                 <div className="item">
                     <div className="header">
@@ -42,7 +48,7 @@ function Electric() {
                             <img className='img' src="img/logo.png" alt="" />
                             <p>Икт Запчасти</p>
                         </div>
-                        <img className='close' src="img/close.svg" alt="" />
+                        <img onClick={closeInfoClick} className='close' src="img/close.svg" alt="" />
                     </div>
                     <ul>
                         <li>
@@ -89,6 +95,7 @@ function Electric() {
                 </div>
             </div>
         </div>
+        )}
     </div>
     </>
   )
