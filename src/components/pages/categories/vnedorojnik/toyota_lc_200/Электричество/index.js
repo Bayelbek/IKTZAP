@@ -20,8 +20,39 @@ function Electric() {
                 <div className='text'><Link to='/categories'>Категории </Link>/ <Link to='/category/1'>Внедорожник</Link> / Toyota LC 200 </div>
             </div>
             <div className="text">Электричество</div>
-            <ul>
+
+            <table>
+                <colgroup>
+                
+                </colgroup>
+
+                <tr>
+                    <th>Код</th>
+                    <th>Название</th>
+                    <th>Артикуль</th>
+                    <th>Чита</th>
+                    <th>Култума</th>
+                    <th>Озерный</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>ОБ-00029112</td>
+                    <td>А12-21-3 12V (P21W 12V 21 WBA15s)повор.лампа</td>
+                    <td>А12-21-3</td>
+                    <td>5 шт</td>
+                    <td>6 шт</td>
+                    <td>7 шт</td>
+                    <td><button onClick={openInfoClick}>Подробнее...</button></td>
+                </tr>
+            </table>
+
+
+
+            {/* <ul>
                 <li>
+                    <p>Название</p>
+                    <br/>
+                    <br/>
                     <p className='name'>А12-21-3 12V (P21W 12V 21 WBA15s)повор.лампа</p>
                     <p>|</p>
                     <p className='number'>27</p>
@@ -37,7 +68,7 @@ function Electric() {
                     <p className='shtuk'>шт</p>
                     <button onClick={openInfoClick}>Подробнее...</button>
                 </li>
-            </ul>
+            </ul> */}
         </div>
         {openInfo && (
             <div className="info">

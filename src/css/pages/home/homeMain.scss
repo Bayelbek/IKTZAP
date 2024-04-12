@@ -8,7 +8,6 @@
             background-size: cover;
             backdrop-filter: blur(5px);
         .slider{
-
             position: absolute;
             margin:150px 0 0 -50px;
             background-color: white;
@@ -299,4 +298,18 @@
     }
 
     
+}
+
+
+
+@media (max-width:1400px){
+    .homeMain{
+        .home_slider{
+            .slider{
+                max-width: 1097px;
+                width: 100%;
+                margin-left: 40px;
+            }
+        }
+    }
 }

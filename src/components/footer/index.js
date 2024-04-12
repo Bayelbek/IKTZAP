@@ -61,10 +61,10 @@ function footer() {
                             <p>672015, Забайкальский край, г. Чита, ул. Дивизионная, д.3, п. Песчанка</p>
                           </li>
                         </ul> */}
-                        <div className="footer_cars">
+                        {/* <div className="footer_cars">
                           <img className="ekskovator" src="img/Cars/left.png" alt="" />
                           <img className="samosval" src="img/Cars/right.png" alt="" />
-                        </div>
+                        </div> */}
                     </div>
                 </div>    
         </div>

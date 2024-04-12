@@ -5,12 +5,11 @@ import Home from "./components/pages/home";
 import Categories from "./components/pages/categories/index.tsx";
 import Shop from "./components/pages/shops";
 import Contacts from "./components/pages/contacts";
+
 import Vnedorojnik from "./components/pages/categories/vnedorojnik/index.tsx";
 import ToyotaLc200 from "./components/pages/categories/vnedorojnik/toyota_lc_200";
 import ToyotaLc200Electric from "./components/pages/categories/vnedorojnik/toyota_lc_200/Электричество";
 
-
-// import { id } from './components/pages/categories/index.tsx';
 
 function App() {
   return (
@@ -21,7 +20,7 @@ function App() {
           <Route path="/categories" element={<Categories />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/contacts" element={<Contacts />} />
-          <Route path="/category/1" element={<Vnedorojnik />} />
+          <Route path="/category/:id" element={<Vnedorojnik />} />
           <Route path="/toyota_lc_200" element={<ToyotaLc200 />} />
           <Route
             path="/toyota_lc_200_electric"

@@ -52,7 +52,7 @@ function home() {
               </div>
             </div>
           </div>
-        </div>
+        </div> 
         <div className="home_categories">
           <img className="ekskovator" src="img/Cars/Эксковатор.jpg" alt="" />
           <img className="kran" src="img/Cars/50.jpg" alt="" />
@@ -137,8 +137,7 @@ function home() {
             </ul>
            
           </div>
-        </div>
-
+        </div> 
         <div className="home_news">
                 <h2>Новости</h2>
                 <div className="item">
@@ -154,8 +153,7 @@ function home() {
                         </div>
                     </div>
                 </div>
-        </div>
-
+        </div> 
         <div className="home_forms">
             <div className="container">
                 <div className="forms_item">
@@ -180,9 +178,7 @@ function home() {
                     </form>
                 </div>
             </div>
-        </div>
-
-        <Footer/>
+        </div> 
       </div>
     </>
   );

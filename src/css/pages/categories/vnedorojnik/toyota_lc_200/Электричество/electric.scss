@@ -124,4 +124,25 @@
             }
         }
     }
+
+    tr{
+        text-align: center;
+        th{
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        td{
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 20px;
+            button{
+                padding: 10px;
+                background-color: #019064;
+                color: white;
+                border:none;
+                border-radius: 5px;
+            }
+        }
+    }
 }
