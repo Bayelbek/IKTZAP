@@ -23,8 +23,9 @@ function Header() {
                 <p><img src="img/phone.svg" alt="" /><a href="tel:+79998889999">+7 999 888 99-99</a></p>
             </div>
             <div className="register">
-                <a className='signIN' href="#">Войти</a>
-                <a className='signUP' href="#">Зарегистрироваться</a>
+                <a className='' href="#"></a>
+                <Link className='signIN' to="/LoginForm">Войти </Link>
+                <Link className='signUP' to="/RegistrationForm">Зарегистрироваться </Link>
             </div>
         </div> 
         <div className="header_two">
