@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import  '../../css/pages/RegistrationForm/registration.css';
+import { useNavigate } from 'react-router-dom';
 
 function Registration() {
     const [formData, setFormData] = useState({
@@ -8,9 +9,14 @@ function Registration() {
       password: '',
       confirmPassword: '',
     });
-  
+      
     const [errors, setErrors] = useState({});
     const [submitted, setSubmitted] = useState(false);
+    const navigate = useNavigate();
+
+    const handleBackClick = () => {
+      navigate(-1); // Возвращает на предыдущую страницу
+    };
   
     const handleChange = (e) => {
       const { name, value } = e.target;
@@ -24,23 +30,23 @@ function Registration() {
       const errors = {};
   
       if (!formData.username.trim()) {
-        errors.username = 'Username is required';
+        errors.username = 'Имя пользователя является обязательным';
       }
   
       if (!formData.email.trim()) {
-        errors.email = 'Email is required';
+        errors.email = 'Требуется электронная почта';
       } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-        errors.email = 'Email is invalid';
+        errors.email = 'Электронный адрес недействителен';
       }
   
       if (!formData.password) {
-        errors.password = 'Password is required';
+        errors.password = 'Требуется пароль';
       } else if (formData.password.length < 6) {
-        errors.password = 'Password must be at least 6 characters';
+        errors.password = 'Пароль должен содержать не менее 6 символов';
       }
   
       if (formData.password !== formData.confirmPassword) {
-        errors.confirmPassword = 'Passwords do not match';
+        errors.confirmPassword = 'Пароль не совпадает';
       }
   
       return errors;
@@ -53,19 +59,22 @@ function Registration() {
   
       if (Object.keys(errors).length === 0) {
         setSubmitted(true);
-        console.log('Form submitted:', formData);
+        console.log('Представленная форма:', formData);
       }
     };
   
     return (
       <div className='registrationForm'>
-        <h2 className='title'>Sign Up</h2>
+        <button onClick={handleBackClick} className='buttonStyle'>
+        Назад
+        </button>
+        <h2 className='title'>Регистрация</h2>
         {submitted ? (
-          <p className='successMessage'>Registration successful!</p>
+          <p className='successMessage'>Регистрация прошла успешно!</p>
         ) : (
           <form onSubmit={handleSubmit}>
             <div className='formGroup'>
-              <label className='label'>Username</label>
+              <label className='label'>Имя пользователя</label>
               <input
                 type="text"
                 name="username"
@@ -76,7 +85,7 @@ function Registration() {
               {errors.username && <p className='error'>{errors.username}</p>}
             </div>
             <div className='formGroup'>
-              <label className='label'>Email</label>
+              <label className='label'>Электронная почта</label>
               <input
                 type="email"
                 name="email"
@@ -87,7 +96,7 @@ function Registration() {
               {errors.email && <p className='error'>{errors.email}</p>}
             </div>
             <div className='formGroup'>
-              <label className='label'>Password</label>
+              <label className='label'>Пароль</label>
               <input
                 type="password"
                 name="password"
@@ -98,7 +107,7 @@ function Registration() {
               {errors.password && <p className='error'>{errors.password}</p>}
             </div>
             <div className='formGroup'>
-              <label className='label'>Confirm Password</label>
+              <label className='label'>Подтвердите пароль</label>
               <input
                 type="password"
                 name="confirmPassword"
@@ -110,7 +119,7 @@ function Registration() {
                 <p className='error'>{errors.confirmPassword}</p>
               )}
             </div>
-            <button type="submit" className='submitButton'>Register</button>
+            <button type="submit" className='submitButton'>Зарегистрироваться</button>
           </form>
         )}
       </div>
