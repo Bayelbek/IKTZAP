@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import Header from "../../header";
 import Footer from "../../footer";
@@ -11,13 +11,14 @@ import { Category } from "../../../models/category";
 
 
 function Сategories() {
+  const {id} = useParams()
   const [items, setItems] = useState<Category[]>([]);
   
   useEffect(() => {
-    fetchCategories().then((res) => {
+    fetchCategories(id ? +id : undefined).then((res) => {
       setItems(res);
     });
-  }, []);
+  }, [id]);
 
   console.log(items)
 
@@ -32,7 +33,7 @@ function Сategories() {
           <ul>
             <li>
               {items.map((g) => (
-                <Link key={g.id} to={`/category/${g.id}`} >
+                <Link key={g.id} to={`/category/${g.id}${id ? '/product' : ''}`} >
                   <img src={g.image_url} alt="" />
                   <div className="title">
                     <p>{g.title}</p>
