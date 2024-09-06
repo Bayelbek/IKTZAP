@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../../css/pages/LoginForm/loginForm.css'; // Импортируем стили
+import { useNavigate } from 'react-router-dom';
+
 
 function LoginForm() {
   const [formData, setFormData] = useState({
@@ -9,6 +11,12 @@ function LoginForm() {
 
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const navigate = useNavigate();
+
+  const handleBackClick = () => {
+    navigate(-1); // Возвращает на предыдущую страницу
+  };
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,13 +30,13 @@ function LoginForm() {
     const errors = {};
 
     if (!formData.email.trim()) {
-      errors.email = 'Email is required';
+      errors.email = 'Требуется электронная почта';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = 'Email is invalid';
+      errors.email = 'Электронный адрес недействителен';
     }
 
     if (!formData.password) {
-      errors.password = 'Password is required';
+      errors.password = 'Требуется пароль';
     }
 
     return errors;
@@ -41,20 +49,23 @@ function LoginForm() {
 
     if (Object.keys(errors).length === 0) {
       setSubmitted(true);
-      console.log('Form submitted:', formData);
+      console.log('Представленная форма:', formData);
       // Здесь можно добавить логику для отправки данных на сервер
     }
   };
 
   return (
     <div className='loginForm'>
-      <h2 className='title'>Login</h2>
+      <button onClick={handleBackClick} className='buttonStyle'>
+      Назад
+        </button>
+      <h2 className='title'>Вход в учетную запись</h2>
       {submitted ? (
-        <p className='successMessage'>Login successful!</p>
+        <p className='successMessage'>Вход в систему успешно выполнен!</p>
       ) : (
         <form onSubmit={handleSubmit}>
           <div className='formGroup'>
-            <label className='label'>Email</label>
+            <label className='label'>Адрес электронной почты</label>
             <input
               type="email"
               name="email"
@@ -65,7 +76,7 @@ function LoginForm() {
             {errors.email && <p className='error'>{errors.email}</p>}
           </div>
           <div className='formGroup'>
-            <label className='label'>Password</label>
+            <label className='label'>Пароль</label>
             <input
               type="password"
               name="password"
@@ -75,7 +86,7 @@ function LoginForm() {
             />
             {errors.password && <p className='error'>{errors.password}</p>}
           </div>
-          <button type="submit" className='submitButton'>Login</button>
+          <button type="submit" className='submitButton'>Войти в систему</button>
         </form>
       )}
     </div>
