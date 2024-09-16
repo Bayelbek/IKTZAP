@@ -12,7 +12,7 @@ function footer() {
                             <li className="logo">
                               <div className="logo_item">
                                 <img src="img/logo.png" alt="" />
-                                <p>Икт Запчасти</p>
+                                <p>ИКТ Запчасти</p>
                               </div>
                               <p>© 2024 Все права защищены.</p>
                             </li>

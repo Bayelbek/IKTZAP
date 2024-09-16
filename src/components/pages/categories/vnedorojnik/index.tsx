@@ -12,7 +12,7 @@ function Vnedorojnik() {
 
 
   React.useEffect(() => {
-    fetchCategories().then((res) => {
+    fetchCategories(+(id||0)).then((res) => {
       setItems(res);
     });
   }, []);
@@ -30,39 +30,18 @@ function Vnedorojnik() {
           <div className="item">
             <ul>
               <li>
-                <Link to="/toyota_lc_200">
+                {items.map(g=>(<Link to="/toyota_lc_200">
                   <img
                     style={{ width: "280px" }}
                     src="img/Cars/toyota_lc_200.jpg"
                     alt=""
                   />
                   <div className="title">
-                    <p>toyota lc 200</p>
+                    <p>{g.title}</p>
                     <img src="img/right.svg" alt="" />
                   </div>
-                </Link>
-                <Link to="/vnedorojnik">
-                  <img
-                    style={{
-                      width: "290px",
-                      height: "180px",
-                      marginBottom: "20px",
-                    }}
-                    src="img/Cars/toyota_lc_prado_150.png"
-                    alt=""
-                  />
-                  <div className="title">
-                    <p>Toyota lc prado 150</p>
-                    <img src="img/right.svg" alt="" />
-                  </div>
-                </Link>
-                <a href="/">
-                  <img src="img/Cars/vnedorojnik.png" alt="" />
-                  <div className="title">
-                    <p>Toyota hilux </p>
-                    <img src="img/right.svg" alt="" />
-                  </div>
-                </a>
+                </Link>))}
+
               </li>
             </ul>
           </div>
