@@ -2,11 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import App from "./App";
+import ExcelComponent from "./components/admin/ExcelComponent";
+import NewsComponent from "./components/pages/home/NewsComponent"
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <App />
+    <App /> 
+    {/* <ExcelComponent/> */}
+    {/* <NewsComponent/> */}
   </React.StrictMode>
 );
