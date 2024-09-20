@@ -25,7 +25,7 @@ function Header() {
             <div className="register">
                 <a className='' href="#"></a>
                 <Link className='signIN' to="/LoginForm">Войти </Link>
-                <Link className='signUP' to="/RegistrationForm">Зарегистрироваться </Link>
+                {/* <Link className='signUP' to="/Registrat ionForm">Зарегистрироваться </Link> */}
             </div>
         </div> 
         <div className="header_two">
@@ -58,7 +58,7 @@ function Header() {
                       <ul>
                         <li><a href="">Главная</a></li>
                         <li><a href="">Категории</a></li>
-                        <li><a href="">Магазин</a></li>
+                        {/* <li><a href="">Магазин</a></li> */}
                         <li><a href="">Контакты</a></li>
                       </ul>
                     </div>
@@ -68,7 +68,7 @@ function Header() {
                     </div>
                     <div className="register">
                       <button className='voyti'>Войти</button>
-                      <button className='zareg'>Зарегистрироваться</button>
+                      {/* <button className='zareg'>Зарегистрироваться</button> */}
                     </div>
                   </div>
                 </div>
@@ -84,7 +84,7 @@ function Header() {
             <ul>
               <li><Link to="/">Главная</Link></li>
               <li><Link to="/categories">Категории</Link></li>
-              <li><Link to="/shop">Магазин</Link></li>
+              {/* <li><Link to="/shop">Магазин</Link></li> */}
               <li><Link to="/contacts">Контакты</Link></li>
             </ul>
               <a href="" className='button'>
