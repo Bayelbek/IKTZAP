@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as XLSX from 'xlsx';
-import "../../components/admin/ExcelComponent.css"
+import "../ExcelApp/ExcelPage.css"
 
 
 const ExcelPage = () => {
@@ -28,13 +28,6 @@ const ExcelPage = () => {
     reader.readAsArrayBuffer(file);
   };
 
-  // Функция для изменения данных в ячейке
-  const handleCellChange = (rowIndex, colIndex, value) => {
-    const newData = [...excelData];
-    newData[rowIndex][colIndex] = value;
-    setExcelData(newData);
-  };
-
   // Функция для экспорта данных в файл Excel
   const handleExport = () => {
     const worksheet = XLSX.utils.aoa_to_sheet([headers, ...excelData]);
@@ -48,7 +41,7 @@ const ExcelPage = () => {
 
   return (
     <div style={{ padding: '20px' }}>
-      <h1>Импорт и Экспорт Excel с редактированием</h1>
+      <h1>Импорт и Экспорт Excel</h1>
 
       {/* Поле для загрузки файла Excel */}
       <input type="file" accept=".xlsx, .xls" onChange={handleImport} />
@@ -88,14 +81,7 @@ const ExcelPage = () => {
             {excelData.map((row, rowIndex) => (
               <tr key={rowIndex}>
                 {row.map((val, colIndex) => (
-                  <td key={colIndex}>
-                    <input
-                      type="text"
-                      value={val}
-                      onChange={(e) => handleCellChange(rowIndex, colIndex, e.target.value)}
-                      style={{ width: '100%' }}
-                    />
-                  </td>
+                  <td key={colIndex}>{val ? val : "Нет данных"}</td>
                 ))}
               </tr>
             ))}
