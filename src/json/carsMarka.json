@@ -1,0 +1,27 @@
+[
+    {
+        "parent_id" : 1,
+        "title" : "Toyota LC 200",
+        "images": "toyota_lc_200.jpg"
+    },
+    {
+        "parent_id" : 1,
+        "title" : "Toyota LC Prado 150",
+        "images": "toyota_lc_prado_150.png"
+    },
+    {
+        "parent_id" : 2,
+        "title" : "Yutong",
+        "images": "Avtobus.png"
+    },
+    {
+        "parent_id" : 3,
+        "title" : "HYUNDAI-R430LC 9SH",
+        "images": "Excovator/HYUNDAI-R430LC 9SH.webp"
+    },
+    {
+        "parent_id" : 4,
+        "title" : "SHACMAN X5000 6x6",
+        "images": "Samosval.png"
+    }
+]

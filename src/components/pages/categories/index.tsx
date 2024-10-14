@@ -6,6 +6,7 @@ import Footer from "../../footer";
 import "../../../css/pages/categories/categoriesMain.scss";
 import { fetchCategories } from "../../../api/category.ts";
 import { Category } from "../../../models/category";
+import axios from "axios";
 
 
 
@@ -18,6 +19,7 @@ function Сategories() {
     fetchCategories(id ? +id : undefined).then((res) => {
       setItems(res);
     });
+    
   }, [id]);
 
   console.log(items)
@@ -37,7 +39,7 @@ function Сategories() {
                   <img src={g.image_url} alt="" />
                   <div className="title">
                     <p>{g.title}</p>
-                    <img src="img/right.svg" alt="" />
+                    <img src="/img/right.svg" alt="" />
                   </div>
                 </Link>
               ))}

@@ -11,18 +11,20 @@ function HeaderAdmin() {
   }
 
   return (
-    <div className='header'>
+    <div className='headerAdmin'>
       <div className="container">
         <div className="headerItem">
             <div className="logo">
-                <img src="img/logo.png" alt="" />
-                <p>ИКТ Запчасти</p>
+                <img src="/img/logo.png" alt="" />
             </div>
             <div className="search">
-                <img src="img/search.svg" alt="" />
+                <img src="/img/search.svg" alt="" />
                 <input type="text" name="" id="" placeholder='Поиск...' />
             </div>
-            <div className="user"></div>
+            <div className="user">
+              <p className="name">Admin</p>
+              <img src="/img/substrelka.ico" alt="" />
+            </div>
         </div>
       </div>
     </div>

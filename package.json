@@ -11,7 +11,7 @@
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.24",
     "ag-grid-community": "^32.1.0",
-    "ag-grid-react": "^32.1.0",
+    "ag-grid-react": "^32.2.0",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
     "firebase": "^10.13.1",
