@@ -47,24 +47,6 @@ function footer() {
                               </div>
                             </li>
                         </ul>
-                        {/* <ul className='info'>
-                          <li>
-                            <img src="img/icons/phone.svg" alt="" />
-                            <p>84950099955 доб.4600</p>
-                          </li>
-                          <li>
-                            <img src="img/icons/gmail.png" alt="" />
-                            <p>info@eastcon.tech</p>
-                          </li>
-                          <li>
-                            <img src="img/icons/local.png" alt="" />
-                            <p>672015, Забайкальский край, г. Чита, ул. Дивизионная, д.3, п. Песчанка</p>
-                          </li>
-                        </ul> */}
-                        {/* <div className="footer_cars">
-                          <img className="ekskovator" src="img/Cars/left.png" alt="" />
-                          <img className="samosval" src="img/Cars/right.png" alt="" />
-                        </div> */}
                     </div>
                 </div>    
         </div>

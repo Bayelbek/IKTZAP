@@ -11,54 +11,34 @@ const slides: Slide[] = [
   {
     title: "SANY SY124543500H или аналог 0001",
     specs: [
-      "Эксплуатационная",
+      "Эксплуатационная масса: 50т",
       "Длина стрелы: 7м",
       "Длина рукояти: 3м",
-      "Объем коasdaв",
+      "Объем ковша: 2,5 м3",
     ],
-    imageUrl: "img/Cars/Экскаватор.png",
+    imageUrl: "/img/Cars/Экскаватор.png",
   },
   {
     title: "SANY SY111111500H или аналог",
     specs: [
-      "Эксплуатационная : 50т",
+      "Эксплуатационная масса: 50т",
       "Длина стрелы: 7м",
-      "Длина рукоasdяти: 3м",
+      "Длина рукояти: 3м",
       "Объем ковша: 2,5 м3",
     ],
-    imageUrl: "img/Cars/Экскаватор.jpg",
+    imageUrl: "/img/Cars/Экскаватор.png",
   },
   {
     title: "SANY SY500H или аналог",
     specs: [
-      "Эксплуатационная : 50т",
-      "Длина стрелы: ",
+      "Эксплуатационная масса: 50т",
+      "Длина стрелы: 7м",
       "Длина рукояти: 3м",
       "Объем ковша: 2,5 м3",
     ],
-    imageUrl: "img/Cars/Экскаватор.jpg",
+    imageUrl: "/img/Cars/Экскаватор.png",
   },
 ];
-
-interface SlideDetailsProps {
-  slide: Slide;
-}
-
-const SlideDetails: React.FC<SlideDetailsProps> = ({ slide }) => (
-  <div className="flex_container">
-    <span className="title_name">{slide.title}</span>
-    <ul>
-      {slide.specs.map((spec, index) => (
-        <li key={index}>
-          <img src="img/done.png" alt="done" className="img_t" />
-          <span className="title_s">{spec}</span>
-        </li>
-      ))}
-    </ul>
-    <img className="ekskovator" src={slide.imageUrl} alt="эксковатор" />
-    <button>Подробнее...</button>
-  </div>
-);
 
 const Slider: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -76,15 +56,41 @@ const Slider: React.FC = () => {
   const currentSlide = slides[currentIndex];
 
   return (
-    <div className="home_slider">
+    <div
+      className="slider-container"
+      style={{
+        backgroundImage: "url('/img/background.jpg')",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="slider">
-        <div className="button_pn" onClick={handlePrev}>
-          <img className="left" src="img/right.svg" alt="prev" />
+        <button className="slider-button prev" onClick={handlePrev}>
+          {"<"}
+        </button>
+        <div className="slide-content">
+          <h2>{currentSlide.title}</h2>
+          <ul>
+            {currentSlide.specs.map((spec, index) => (
+              <li key={index}>
+                <img src="/img/done.png" alt="done" className="icon" />
+                {spec}
+              </li>
+            ))}
+          </ul>
+          <button className="details-button">Подробнее...</button>
         </div>
-        <SlideDetails slide={currentSlide} />
-        <div className="button_pn" onClick={handleNext}>
-          <img className="right" src="img/right.svg" alt="next" />
+        <div className="slide-image-container">
+          <img
+            className="slide-image"
+            src={currentSlide.imageUrl}
+            alt={currentSlide.title}
+          />
         </div>
+        <button className="slider-button next" onClick={handleNext}>
+          {">"}
+        </button>
       </div>
     </div>
   );
