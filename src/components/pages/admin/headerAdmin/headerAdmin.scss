@@ -1,0 +1,48 @@
+.headerAdmin{
+    margin: 10px 0;
+    .headerItem{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo{
+            img{
+                width: 60px;
+            }
+        }
+
+        .search{
+            border:1px solid gray;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            padding: 5px 10px;
+            input{
+                border: none;
+                outline: none;
+                font-size: 18px;
+                margin: 0 5px 0 10px;
+                width:  40vw;
+            }
+
+            img{
+                width: 22px;
+            }
+        }
+
+        .user{
+            display: flex;
+            align-items: center;
+            font-size: 19px;
+            .name{
+                margin: 0 25px 0 0;  
+                &:hover{
+                    color: green;
+                }
+            }
+            img{
+                cursor: pointer;
+                width: 25px;
+            }
+        }
+    }
+}

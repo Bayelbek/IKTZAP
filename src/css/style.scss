@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+body::-webkit-scrollbar{
+    display: none;
+
+}
+
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+@media (max-width: 1200px){
+    .header .container{
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 992px){
+    .header {
+        .container{
+            max-width: 800px;
+        }
+
+        .header_one{
+            .contact{
+                font-size: 13px;
+                img{
+                    width: 15px;
+                }
+            }
+            .register{
+                a{
+                    padding: 7px 15px;
+                    font-size: 13px;
+                }
+            }
+        }
+        
+        .header_two {
+            .logo{
+                img{
+                    width: 50px;
+                    height: 50px;
+                }
+                p{
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+            }
+            .search {
+                input{
+                    width: 250px;
+                    font-size: 15px;
+                }
+                img{
+                    width: 23px;
+                }
+            }
+            .basket{
+                padding: 5px 10px;
+                svg{
+                    width: 20px;
+                }
+                a{
+                    p{
+                        font-size: 15px;
+                        margin-bottom: -4px;
+                    }
+                }
+            }   
+        }
+
+        .header_three{
+            .header_three_item{
+                ul{
+                    li{
+                        width: 100px;
+                        text-align: center;
+                        margin:0 10px 0 0;
+                        a{
+                            font-size: 15px;
+                            padding: 0;
+                        }
+                    }
+                }
+                a{
+                    font-size: 15px;
+                    padding: 5px 15px;
+                    img{
+                        width: 12px;
+                    }
+                }
+            }
+        }
+    
+    }
+}
+
+@media (max-width: 768px){
+    .header{
+        .container{
+            max-width: 500px;
+        }
+        .header_one{
+            display: none;
+        }
+        .header_two{
+            .basket{
+                display: none;
+            }
+            .search{
+                display: none;
+            }
+            .search_phone{
+                display: block;
+                margin-right: -180px;
+            }
+            .menu{
+                display: block;
+                z-index: 2;
+            }
+        }
+        .header_three{
+            .header_three_item{
+                display: none;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 500px){
+    .header{
+        .container{
+            max-width: 400px;
+        }
+        .header_two{
+            .search_phone{
+                margin-right: -60px;
+            }
+            .menu{
+                .menu_item{
+                    .item{
+                        width: 80%;
+                        .logo{
+                            .logoIKT{
+                                width: 180px;
+                                height: 70px;
+                            }
+                            .close{ 
+                                width: 30px;
+                                margin-right: 20px;
+                            }
+                        }
+                        .contact{
+                            bottom: 220px;
+                        }
+                        .register{
+                            display: flex;
+                            flex-direction: column  ;
+                            button{
+                                margin: 10px ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 360px){
+    .header{
+        .header_two{
+            .search_phone{
+                margin-right: -15px;
+            }
+            
+        }
+    }
+    
+}

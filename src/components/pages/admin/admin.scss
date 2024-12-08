@@ -1,0 +1,224 @@
+.main_admin{
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    .block_one{
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 18px;
+            a{
+                color: black;
+            }
+            .active{
+                
+                li{
+                    border-top: 1px solid transparent;
+                    border-right: 1px solid transparent;
+                    border-bottom: 1px solid transparent;
+                    box-shadow: none;
+                    
+                    color: green;
+                    font-weight: 600;
+                    opacity: 1; 
+                }
+            }
+            li{
+                border-top: 1px solid rgba(0, 152, 18, 0.141);
+                border-right: 1px solid rgba(0, 152, 18, 0.141);
+                border-bottom: 1px solid rgba(0, 152, 18, 0.332);
+                border-top-right-radius: 7px;
+                border-bottom-right-radius: 7px;
+                width: 200px;
+                padding: 20px 0;
+                opacity: .5;
+                -webkit-box-shadow: 14px 2px 30px -9px rgba(14, 172, 6, 0.2);
+                -moz-box-shadow: 14px 2px 30px -9px rgba(14, 172, 6, 0.2);
+                box-shadow: 14px 2px 30px -9px rgba(14, 172, 6, 0.2);
+                cursor: pointer;
+                transition: all .3s ease-in-out;
+                font-size: 20px;                
+                &:hover{
+                    border-top: 1px solid transparent;
+                    border-right: 1px solid transparent;
+                    border-bottom: 1px solid transparent;
+                    box-shadow: none;
+                    opacity: 1;
+                    color: green;
+                }
+            }
+            
+        }
+    }
+
+    .block_two{
+        height: 80vh;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 2em;
+            height: 2em
+        }
+        .header_category{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px 0 40px;
+            h2{
+                font-size: 27px;
+                font-weight: 600;
+            }
+            a{
+                border: 1px solid rgba(110, 110, 110, 0.329);
+                padding: 10px 20px;
+                border-radius: 5px;
+                color: green;
+                transition: all .2s ease-in-out;
+                cursor: pointer;
+                &:hover{
+                    background-color: rgba(0, 128, 0, 0.781);
+                    color: white;
+                }
+            }
+        }
+
+        .maket_list{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            li{
+                flex: 1 1 200px; /* Ширина карточки, адаптивная при изменении экрана */
+                display: flex;
+                a{
+                    border: 1px solid rgba(106, 106, 106, 0.301);
+                    border-radius: 10px;
+                    width: 200px;
+                    margin: 20px 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 20px;
+                    align-items: center;
+                    img{
+                        width: 100%;
+                        height: 150px;
+                    }
+                    
+                    b{
+                        text-align: center;
+                        color: black;
+                        margin: 10px 0 ;
+                        flex:1 1 auto;
+                    }
+                    
+                }
+
+                .CategoryCars{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 200px;
+
+                    
+                    img{
+                        height: 120px;
+                    }
+
+                    .name{
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .product_item{
+                ul{
+                    list-style: none;
+                    li{
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+
+        .maket_product{
+            font-size: 27px;
+            font-weight: 600;
+            margin:  20px 0 0px 30px;
+        }
+
+        .update_item{
+
+            .update_main{
+                display: flex;
+                margin: 20px 40px;
+                justify-content: space-around;
+                .update_left{
+                    display: flex;
+                    flex-direction: column;
+                    img{
+                        margin: 50px 0;
+                        width: 300px;
+                        height: 200px;
+    
+                    }
+                }
+    
+                .update_right{
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+                    justify-content: right;
+                    input{
+                        width: 100%;
+                        border-radius: 5px;
+                        margin: 0 0 15px 0;
+                        border: 1px solid gray;
+                        padding: 5px 10px;
+                        font-size: 18px;
+                        outline: none;
+                    }
+
+                    a{
+                        color: green;
+                        display: inline-block;
+                        width: auto!important;
+                    }
+
+                    .subCategorylist{
+                        outline: none;
+                        padding: 10px 10px;
+                        border-radius: 5px;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+
+            .update_button{
+                text-align: right;
+                button{
+                    border-radius: 3px;
+                    margin: 0 10px ;
+
+                }
+
+                .delete{
+                    background-color: red;
+                }
+            }
+        }
+
+        .description{
+            color: gray;
+        }
+        
+
+        
+    }
+}

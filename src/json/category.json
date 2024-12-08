@@ -1,0 +1,22 @@
+[
+    {
+        "category_id" : 1,
+        "title" : "Внедорожник",
+        "images": "vnedorojnik.png"
+    },
+    {
+        "category_id" : 2,
+        "title" : "Автобус",
+        "images": "Avtobus.png"
+    },
+    {
+        "category_id" : 3,
+        "title" : "Эксковатор",
+        "images": "Эксковатор.jpg"
+    },
+    {
+        "category_id" : 4,
+        "title" : "Самосвал",
+        "images": "Samosval.png"
+    }
+]
